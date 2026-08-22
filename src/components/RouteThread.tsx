@@ -1,11 +1,49 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
 interface RouteThreadProps {
   locations: string[];
   compact?: boolean;
 }
 
 export function RouteThread({ locations, compact = false }: RouteThreadProps) {
+  const threadRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const thread = threadRef.current;
+
+    if (!thread) {
+      return;
+    }
+
+    const revealThread = () => thread.classList.add("route-thread--drawn");
+
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !("IntersectionObserver" in window)
+    ) {
+      revealThread();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          revealThread();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.35, rootMargin: "0px 0px -10% 0px" },
+    );
+
+    observer.observe(thread);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className={`route-thread${compact ? " route-thread--compact" : ""}`}>
+    <div ref={threadRef} className={`route-thread${compact ? " route-thread--compact" : ""}`}>
       <svg
         aria-hidden="true"
         viewBox="0 0 720 86"
