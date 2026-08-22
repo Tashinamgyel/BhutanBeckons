@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 280" fill="none">
+  <defs>
+    <g id="cloud-lobe">
+      <path d="M0 36c-24 4-43-11-43-34 0-24 23-43 47-38 24 4 38 28 30 51-5 18-20 28-34 21Z" />
+      <path d="M-16 10c-7-17 4-34 21-34 18 0 27 19 19 34-7 13-25 15-34 4-7-8-3-19 6-22 9-4 18 4 16 13-1 6-8 9-13 6" />
+    </g>
+  </defs>
+
+  <g stroke="#C3BCA8" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="3" d="M22 145c83 0 126-18 177-48 52-31 98-29 154 12" />
+    <path stroke-width="2.1" d="M22 145c73 16 125 17 180-5 60-25 101-24 151 0" />
+    <path stroke-width="1.8" d="M87 164c48 6 84 1 126-16" />
+
+    <g transform="translate(840 0) scale(-1 1)">
+      <path stroke-width="3" d="M22 145c83 0 126-18 177-48 52-31 98-29 154 12" />
+      <path stroke-width="2.1" d="M22 145c73 16 125 17 180-5 60-25 101-24 151 0" />
+      <path stroke-width="1.8" d="M87 164c48 6 84 1 126-16" />
+    </g>
+
+    <g stroke-width="2.4" transform="translate(420 76)">
+      <use href="#cloud-lobe" />
+    </g>
+    <g stroke-width="2.4" transform="translate(348 142) rotate(-90)">
+      <use href="#cloud-lobe" />
+    </g>
+    <g stroke-width="2.4" transform="translate(492 142) rotate(90)">
+      <use href="#cloud-lobe" />
+    </g>
+    <g stroke-width="2.4" transform="translate(420 208) rotate(180)">
+      <use href="#cloud-lobe" />
+    </g>
+
+    <path stroke-width="1.8" d="M379 142h82" />
+  </g>
+</svg>
