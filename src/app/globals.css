@@ -657,8 +657,11 @@ h3 {
   stroke-width: 1.8;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  animation: draw-route 1.6s 250ms ease forwards;
   vector-effect: non-scaling-stroke;
+}
+
+.route-thread--drawn .route-thread__line path {
+  animation: draw-route 1.6s 180ms ease forwards;
 }
 
 .route-thread ol {
@@ -1641,7 +1644,9 @@ h3 {
     animation-iteration-count: 1 !important;
   }
 
-  .route-thread__line path {
+  .route-thread__line path,
+  .route-thread--drawn .route-thread__line path {
+    animation: none;
     stroke-dashoffset: 0;
   }
 }
