@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MobileMenu } from "./MobileMenu";
 
 const primaryNavigation = [
   { href: "/destinations", label: "Destinations" },
@@ -39,14 +40,13 @@ export function SiteHeader() {
           Plan a journey <span aria-hidden="true">→</span>
         </Link>
 
-        <details className="mobile-menu">
-          <summary>Menu</summary>
-          <nav aria-label="Mobile navigation">
-            <NavigationLinks />
-            <Link href="/partner-with-us">Partner with us</Link>
-            <Link href="/contact">Plan a journey</Link>
-          </nav>
-        </details>
+        <MobileMenu
+          items={[
+            ...primaryNavigation,
+            { href: "/partner-with-us", label: "Partner with us" },
+            { href: "/contact", label: "Plan a journey" },
+          ]}
+        />
       </div>
     </header>
   );

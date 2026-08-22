@@ -52,7 +52,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className={`${fraunces.variable} ${workSans.variable} ${ibmPlexMono.variable}`}>
         <a className="skip-link" href="#main-content">
           Skip to content
