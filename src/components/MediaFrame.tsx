@@ -21,7 +21,8 @@ export function MediaFrame({
           src={media.src}
           alt={media.alt}
           fill
-          priority={priority}
+          loading={priority ? "eager" : undefined}
+          fetchPriority={priority ? "high" : undefined}
           sizes={sizes}
           className="media-frame__image"
         />

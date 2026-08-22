@@ -15,20 +15,10 @@ const mountainTrail: MediaAsset = {
   alt: "Hikers following a mountain trail toward a remote Bhutanese monastery",
 };
 
-const valleyHero: MediaAsset = {
-  ...valley,
-  src: "/images/bhutan-valley-dawn.jpg?hero=journey",
-};
-
-const weaverHero: MediaAsset = {
-  ...weaver,
-  src: "/images/bhutan-weaver.jpg?hero=journey",
-};
-
-const mountainTrailHero: MediaAsset = {
-  ...mountainTrail,
-  src: "/images/bhutan-mountain-trail.jpg?hero=journey",
-};
+const heroVariant = (media: MediaAsset, journey: string): MediaAsset => ({
+  ...media,
+  src: `${media.src}?hero=${journey}`,
+});
 
 const placeholder = (
   label: string,
@@ -60,7 +50,7 @@ export const journeys: Journey[] = [
     subtitle: "Seven days inside Bhutan’s living heritage.",
     themes: ["Culture", "Heritage", "Slow Travel"],
     durationDays: 7,
-    heroMedia: valleyHero,
+    heroMedia: heroVariant(valley, "whispers"),
     story: [
       "Bhutan does not reveal itself all at once. It arrives in the sound of morning prayers, the warmth of butter tea, and a mountain road that asks you to slow down.",
       "This is a gentle passage through western Bhutan’s living heart: time with artisans, quiet courtyards, forest paths, and the people who keep old traditions present without placing them behind glass.",
@@ -112,7 +102,7 @@ export const journeys: Journey[] = [
     subtitle: "Eight days of high paths, forest air, and sacred ground.",
     themes: ["Trekking", "Adventure"],
     durationDays: 8,
-    heroMedia: mountainTrailHero,
+    heroMedia: heroVariant(mountainTrail, "tigers-path"),
     story: [
       "In Bhutan, a trail is rarely only a way through the landscape. It links pasture to village, monastery to valley, and effort to a clearer kind of attention.",
       "The Tiger’s Path balances purposeful walking with warm lodges, generous meals, and time to understand the places beneath your boots.",
@@ -152,7 +142,7 @@ export const journeys: Journey[] = [
     subtitle: "Seven days of seclusion, ceremony, and mountain light.",
     themes: ["Romance", "Luxury"],
     durationDays: 7,
-    heroMedia: valleyHero,
+    heroMedia: heroVariant(valley, "kingdom-for-two"),
     story: [
       "The rarest luxury in Bhutan is not excess. It is room: room to linger over breakfast, to take the longer valley road, and to let a day change shape around the two of you.",
       "Private guides, thoughtful stays, and quiet rituals create a journey that feels cared for without ever feeling managed.",
@@ -191,7 +181,7 @@ export const journeys: Journey[] = [
     subtitle: "Seven days of forest, stillness, and considered wellbeing.",
     themes: ["Wellness", "Nature"],
     durationDays: 7,
-    heroMedia: valleyHero,
+    heroMedia: heroVariant(valley, "quiet-kingdom"),
     story: [
       "Wellbeing in Bhutan is woven into ordinary life: a path taken on foot, food shaped by the season, smoke from juniper, and a view given the time it deserves.",
       "The Quiet Kingdom creates space for gentle movement and genuine rest, held by landscape rather than a list of treatments.",
@@ -230,7 +220,7 @@ export const journeys: Journey[] = [
     subtitle: "Six days of kitchens, markets, farms, and generous tables.",
     themes: ["Food", "Culture", "Local Life"],
     durationDays: 6,
-    heroMedia: weaverHero,
+    heroMedia: heroVariant(weaver, "taste-of-bhutan"),
     story: [
       "Bhutanese food makes sense in context: chillies dried on a farmhouse roof, red rice growing beside the river, cheese stirred over a wood fire, and a host insisting on one more serving.",
       "This journey follows those connections from market to field to family table, with enough space between meals to walk, talk, and notice where each flavour begins.",

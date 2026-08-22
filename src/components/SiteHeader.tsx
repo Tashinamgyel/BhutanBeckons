@@ -24,10 +24,12 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header__inner content-shell">
-        <Link className="wordmark" href="/" aria-label="Bhutan Beckons home" translate="no">
+        {/* A native anchor guarantees home navigation if client routing is unavailable at the edge. */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a className="wordmark wordmark--header" href="/" aria-label="Bhutan Beckons home" translate="no">
           <span>Bhutan</span>
           <span>Beckons</span>
-        </Link>
+        </a>
 
         <nav className="desktop-nav" aria-label="Main navigation">
           <NavigationLinks />

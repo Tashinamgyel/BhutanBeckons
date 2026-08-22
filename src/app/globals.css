@@ -182,6 +182,14 @@ h3 {
   line-height: 0.78;
 }
 
+.wordmark--header {
+  position: relative;
+  z-index: 2;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding-right: 0.35rem;
+}
+
 .desktop-nav {
   display: flex;
   justify-content: center;

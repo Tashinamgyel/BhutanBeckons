@@ -5,15 +5,17 @@ import { MediaFrame } from "./MediaFrame";
 interface JourneyCardProps {
   journey: Journey;
   featured?: boolean;
+  eagerImage?: boolean;
 }
 
-export function JourneyCard({ journey, featured = false }: JourneyCardProps) {
+export function JourneyCard({ journey, featured = false, eagerImage = false }: JourneyCardProps) {
   return (
     <article className={`journey-card${featured ? " journey-card--featured" : ""}`}>
       <Link href={`/journeys/${journey.slug}`} aria-label={`Explore ${journey.name}`}>
         <MediaFrame
           media={journey.heroMedia}
           className="journey-card__media"
+          priority={eagerImage}
           sizes={featured ? "(max-width: 760px) 100vw, 66vw" : "(max-width: 760px) 100vw, 38vw"}
         />
         <div className="journey-card__body">

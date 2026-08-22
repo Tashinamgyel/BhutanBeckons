@@ -19,7 +19,12 @@ export default function JourneysPage() {
       <section className="catalogue" aria-label="Bhutan journeys">
         <div className="content-shell journey-grid">
           {journeys.map((journey, index) => (
-            <JourneyCard key={journey.slug} journey={journey} featured={index === 0} />
+            <JourneyCard
+              key={journey.slug}
+              journey={journey}
+              featured={index === 0}
+              eagerImage={index === 0}
+            />
           ))}
         </div>
       </section>
