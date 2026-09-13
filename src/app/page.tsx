@@ -13,13 +13,13 @@ export default function HomePage() {
       <section className="home-hero" aria-labelledby="home-hero-title">
         <div className="home-hero__image">
           <Image
-            src={`${photos.rimpungDzong.src}?hero=home`}
-            alt={photos.rimpungDzong.alt}
+            src={`${photos.paroValley.src}?hero=home`}
+            alt={photos.paroValley.alt}
             fill
             loading="eager"
             fetchPriority="high"
             sizes="100vw"
-            style={{ objectPosition: photos.rimpungDzong.objectPosition }}
+            style={{ objectPosition: photos.paroValley.objectPosition }}
           />
         </div>
         <div className="home-hero__content content-shell">
