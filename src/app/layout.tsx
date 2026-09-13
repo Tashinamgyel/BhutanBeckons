@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     siteName: "Bhutan Beckons",
     images: [
       {
-        url: "/images/bhutan-valley-dawn.jpg",
-        width: 1672,
-        height: 938,
-        alt: "A Bhutanese dzong above a Himalayan valley at dawn",
+        url: "/photos/rimpung-dzong.jpg",
+        width: 2560,
+        height: 1920,
+        alt: "Rinpung Dzong above the Paro valley",
       },
     ],
   },

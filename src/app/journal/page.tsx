@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MediaFrame } from "@/components/MediaFrame";
 import { PageIntro } from "@/components/PageIntro";
+import { photos } from "@/data/photos";
 
 export const metadata: Metadata = {
   title: "Bhutan Journal",
@@ -8,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const notes = [
-  { title: "When the cranes return to Phobjikha", category: "Seasons", date: "Field note · Winter", excerpt: "The valley changes when the black-necked cranes arrive—not loudly, but in the way people look up and make room.", media: { alt: "Cranes in the Phobjikha valley", label: "Phobjikha winter photography", tone: "juniper" as const } },
-  { title: "Why the road to Punakha should take all morning", category: "On the road", date: "Field note · Western Bhutan", excerpt: "There are journeys where the pauses explain more than the destination: a high pass, a roadside kettle, a village path below the clouds.", media: { src: "/images/bhutan-valley-dawn.jpg", alt: "Layered Bhutanese mountains at dawn" } },
-  { title: "A table set around the chilli", category: "Food", date: "Field note · Local life", excerpt: "Ema datshi is often introduced as Bhutan’s national dish. At home, it is better understood as a conversation between season, appetite, and family habit.", media: { alt: "A Bhutanese farmhouse meal", label: "Bhutanese food photography", tone: "gilt" as const } },
-  { title: "The patience inside a handwoven kira", category: "Craft", date: "Field note · Thimphu", excerpt: "Look closely at the cloth and time becomes visible: counted threads, remembered patterns, and decisions made one line at a time.", media: { src: "/images/bhutan-weaver.jpg", alt: "A Bhutanese weaver working at a handloom" } },
+  { title: "When mist settles over the valley", category: "Seasons", date: "Field note · Monsoon", excerpt: "A valley changes when cloud lowers to the fields—not loudly, but in the way paths, farmhouses, and distant slopes reveal themselves one at a time.", media: photos.paroValley },
+  { title: "Why the southern road deserves the long way", category: "On the road", date: "Field note · Southern Bhutan", excerpt: "There are journeys where the pauses explain more than the destination: a high bend, a roadside kettle, and a sea of cloud below the road.", media: photos.thimphuPhuntsholingHighway },
+  { title: "What red rice says about the season", category: "Food", date: "Field note · Local life", excerpt: "A grain of red rice begins in the valley long before it reaches the table, carrying the weather, the harvest, and a family’s way of cooking with it.", media: photos.riceStalk },
+  { title: "A garden held beside Kyichu Lhakhang", category: "Living culture", date: "Field note · Paro", excerpt: "Architecture, flowers, and daily ritual meet without ceremony here; the oldest places in Bhutan remain part of the present tense.", media: photos.kichuLhakhang },
 ];
 
 export default function JournalPage() {

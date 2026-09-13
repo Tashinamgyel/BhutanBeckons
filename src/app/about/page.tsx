@@ -3,6 +3,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { MediaFrame } from "@/components/MediaFrame";
 import { PageIntro } from "@/components/PageIntro";
 import { SectionHeading } from "@/components/SectionHeading";
+import { photos } from "@/data/photos";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -20,7 +21,7 @@ export default function AboutPage() {
       <section className="content-section">
         <div className="content-shell home-craft__grid">
           <MediaFrame
-            media={{ src: "/images/bhutan-weaver.jpg", alt: "A Bhutanese artisan weaving by hand" }}
+            media={photos.kichuLhakhang}
             className="home-craft__image"
             sizes="(max-width: 760px) 100vw, 62vw"
           />

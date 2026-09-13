@@ -3,6 +3,7 @@ export type MediaTone = "oxblood" | "juniper" | "gilt";
 export interface MediaAsset {
   src?: string;
   alt: string;
+  objectPosition?: string;
   label?: string;
   tone?: MediaTone;
 }

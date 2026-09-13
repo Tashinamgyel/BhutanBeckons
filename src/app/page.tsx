@@ -5,6 +5,7 @@ import { MediaFrame } from "@/components/MediaFrame";
 import { RouteThread } from "@/components/RouteThread";
 import { SectionHeading } from "@/components/SectionHeading";
 import { journeys } from "@/data/journeys";
+import { photos } from "@/data/photos";
 
 export default function HomePage() {
   return (
@@ -12,12 +13,13 @@ export default function HomePage() {
       <section className="home-hero" aria-labelledby="home-hero-title">
         <div className="home-hero__image">
           <Image
-            src="/images/bhutan-valley-dawn.jpg?hero=home"
-            alt="A whitewashed Bhutanese dzong above a forested Himalayan valley at dawn"
+            src={`${photos.rimpungDzong.src}?hero=home`}
+            alt={photos.rimpungDzong.alt}
             fill
             loading="eager"
             fetchPriority="high"
             sizes="100vw"
+            style={{ objectPosition: photos.rimpungDzong.objectPosition }}
           />
         </div>
         <div className="home-hero__content content-shell">
@@ -71,10 +73,7 @@ export default function HomePage() {
       <section className="home-craft">
         <div className="content-shell home-craft__grid">
           <MediaFrame
-            media={{
-              src: "/images/bhutan-weaver.jpg",
-              alt: "A Bhutanese artisan weaving traditional cloth beside a timber window",
-            }}
+            media={photos.kichuLhakhang}
             className="home-craft__image"
             sizes="(max-width: 760px) 100vw, 62vw"
           />
@@ -82,7 +81,7 @@ export default function HomePage() {
             <p className="eyebrow">Experience, not itinerary</p>
             <h2>Made by people who live here.</h2>
             <p>
-              The moments that remain with you are rarely staged. A loom in motion. Tea after a long path. A guide telling you why a valley matters to their family.
+              The moments that remain with you are rarely staged. A garden path beside an old lhakhang. Tea after a long road. A guide telling you why a valley matters to their family.
             </p>
             <ButtonLink href="/experiences" inverse>
               Meet Bhutan through experience

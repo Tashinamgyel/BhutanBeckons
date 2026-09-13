@@ -1,19 +1,5 @@
+import { photos } from "./photos";
 import type { Journey, MediaAsset } from "./types";
-
-const valley: MediaAsset = {
-  src: "/images/bhutan-valley-dawn.jpg",
-  alt: "A whitewashed Bhutanese dzong above a forested Himalayan valley at dawn",
-};
-
-const weaver: MediaAsset = {
-  src: "/images/bhutan-weaver.jpg",
-  alt: "A Bhutanese artisan weaving traditional cloth beside a timber window",
-};
-
-const mountainTrail: MediaAsset = {
-  src: "/images/bhutan-mountain-trail.jpg",
-  alt: "Hikers following a mountain trail toward a remote Bhutanese monastery",
-};
 
 const heroVariant = (media: MediaAsset, journey: string): MediaAsset => ({
   ...media,
@@ -50,7 +36,7 @@ export const journeys: Journey[] = [
     subtitle: "Seven days inside Bhutan’s living heritage.",
     themes: ["Culture", "Heritage", "Slow Travel"],
     durationDays: 7,
-    heroMedia: heroVariant(valley, "whispers"),
+    heroMedia: heroVariant(photos.rimpungDzong, "whispers"),
     story: [
       "Bhutan does not reveal itself all at once. It arrives in the sound of morning prayers, the warmth of butter tea, and a mountain road that asks you to slow down.",
       "This is a gentle passage through western Bhutan’s living heart: time with artisans, quiet courtyards, forest paths, and the people who keep old traditions present without placing them behind glass.",
@@ -59,17 +45,17 @@ export const journeys: Journey[] = [
       {
         title: "Living fortresses",
         description: "Walk through dzongs where monastic life and civic ritual still share the same courtyards.",
-        image: valley,
+        image: photos.rimpungDzong,
       },
       {
-        title: "Hands of the kingdom",
-        description: "Meet makers whose weaving, carving, and painting carry family knowledge forward.",
-        image: weaver,
+        title: "Quiet courtyards",
+        description: "Enter ancient temple grounds where flowers, timber, and daily ritual share the same space.",
+        image: photos.kichuLhakhang,
       },
       {
-        title: "A sacred ascent",
-        description: "Follow the pine-scented trail to Taktsang, held above the Paro valley.",
-        image: mountainTrail,
+        title: "A valley in season",
+        description: "See Paro change with the mist, the fields, and the first blossom of spring.",
+        image: photos.appleBlossom,
       },
     ],
     itinerary: [
@@ -89,7 +75,7 @@ export const journeys: Journey[] = [
       { propertyName: "Druk Hotel", location: "Thimphu", description: "A central, composed address within walking distance of the capital’s small shops and squares.", image: placeholder("Druk Hotel, Thimphu", "juniper") },
       { propertyName: "Dhensa Boutique Resort", location: "Punakha", description: "Forest-framed rooms above the valley, made for still evenings after days on the road.", image: placeholder("Dhensa, Punakha", "gilt") },
     ],
-    gallery: [valley, weaver, mountainTrail, placeholder("Punakha river valley", "gilt"), placeholder("Morning prayers in Paro", "oxblood"), placeholder("A Bhutanese farmhouse table", "juniper")],
+    gallery: [photos.rimpungDzong, photos.kichuLhakhang, photos.paroValley, photos.mistyValley, photos.appleBlossom, photos.bhutanFlag],
     practicalInfo: { bestTimeToTravel: "March–May and September–November", difficulty: "Gentle, with one moderate hike", recommendedFor: "First visits, culture, and thoughtful pacing", groupSize: "Private, typically 2–10 guests", startingPoint: "Paro International Airport", duration: "7 days / 6 nights" },
     customizable: true,
     durationOptions: [7, 9, 12],
@@ -102,15 +88,15 @@ export const journeys: Journey[] = [
     subtitle: "Eight days of high paths, forest air, and sacred ground.",
     themes: ["Trekking", "Adventure"],
     durationDays: 8,
-    heroMedia: heroVariant(mountainTrail, "tigers-path"),
+    heroMedia: heroVariant(photos.thimphuPhuntsholingHighway, "tigers-path"),
     story: [
       "In Bhutan, a trail is rarely only a way through the landscape. It links pasture to village, monastery to valley, and effort to a clearer kind of attention.",
       "The Tiger’s Path balances purposeful walking with warm lodges, generous meals, and time to understand the places beneath your boots.",
     ],
     highlights: [
-      { title: "Ridge-line mornings", description: "Begin above the cloud line as the eastern peaks take the first light.", image: mountainTrail },
-      { title: "Forest camps", description: "Rest among juniper and blue pine with a local crew who knows these paths by season.", image: placeholder("Blue pine forest camp", "juniper") },
-      { title: "Taktsang at eye level", description: "Reach Bhutan’s best-known monastery with the confidence of a week spent walking.", image: valley },
+      { title: "Ridge-line mornings", description: "Begin above the cloud line as the distant ranges take the first light.", image: photos.phuntsholingCloudSea },
+      { title: "Forest paths", description: "Move through mist, orchard edges, and blue pine with guides who know these paths by season.", image: photos.mistyValley },
+      { title: "The road between valleys", description: "Let the high road become part of the journey, with room to stop whenever the mountains open.", image: photos.thimphuPhuntsholingHighway },
     ],
     itinerary: [
       { dayNumber: 1, title: "Arrive between mountains", location: "Paro", description: "Meet the valley on foot with a gentle acclimatisation walk and an early evening." },
@@ -129,7 +115,7 @@ export const journeys: Journey[] = [
       { propertyName: "Naksel Boutique Hotel", location: "Paro", description: "Forest-edge rooms with broad valley views before and after the trail.", image: placeholder("Naksel, Paro", "juniper") },
       { propertyName: "Druk Path Camps", location: "High country", description: "Well-kept seasonal camps chosen for shelter, water, and expansive mornings.", image: placeholder("Druk Path camp", "oxblood") },
     ],
-    gallery: [mountainTrail, placeholder("Jele Dzong ridge", "oxblood"), placeholder("High mountain camp", "juniper"), valley, placeholder("Jimilang Tsho", "gilt")],
+    gallery: [photos.thimphuPhuntsholingHighway, photos.phuntsholingCloudSea, photos.mistyValley, photos.paroValley, photos.bhutanSunset],
     practicalInfo: { bestTimeToTravel: "April–June and September–November", difficulty: "Moderate; consecutive walking days", recommendedFor: "Active travellers comfortable on mountain paths", groupSize: "Private, typically 2–8 guests", startingPoint: "Paro International Airport", duration: "8 days / 7 nights" },
     customizable: true,
     durationOptions: [8, 10],
@@ -142,15 +128,15 @@ export const journeys: Journey[] = [
     subtitle: "Seven days of seclusion, ceremony, and mountain light.",
     themes: ["Romance", "Luxury"],
     durationDays: 7,
-    heroMedia: heroVariant(valley, "kingdom-for-two"),
+    heroMedia: heroVariant(photos.appleBlossom, "kingdom-for-two"),
     story: [
       "The rarest luxury in Bhutan is not excess. It is room: room to linger over breakfast, to take the longer valley road, and to let a day change shape around the two of you.",
       "Private guides, thoughtful stays, and quiet rituals create a journey that feels cared for without ever feeling managed.",
     ],
     highlights: [
-      { title: "Breakfast above the valley", description: "Begin slowly with mountain light, local honey, and nowhere else to be.", image: valley },
-      { title: "A blessing for two", description: "Share a private temple blessing arranged with respect and local guidance.", image: placeholder("Temple blessing", "oxblood") },
-      { title: "Warm-stone evenings", description: "Return from the trail to a traditional bath and a table set around the season.", image: placeholder("Warm-stone bath", "gilt") },
+      { title: "Breakfast above the valley", description: "Begin slowly with mountain light, local honey, and nowhere else to be.", image: photos.mistyValley },
+      { title: "A blessing for two", description: "Share a private temple blessing arranged with respect and local guidance.", image: photos.kichuLhakhang },
+      { title: "Golden-hour privacy", description: "Let an unplanned evening settle around the two of you as the valley light softens.", image: photos.bhutanSunset },
     ],
     itinerary: [
       { dayNumber: 1, title: "Your valley", location: "Paro", description: "A private welcome, an easy drive, and an evening left beautifully unplanned." },
@@ -168,7 +154,7 @@ export const journeys: Journey[] = [
       { propertyName: "COMO Uma Paro", location: "Paro", description: "A forested hillside retreat with intimate rooms and deeply restorative quiet.", image: placeholder("COMO Uma Paro", "juniper") },
       { propertyName: "Six Senses Punakha", location: "Punakha", description: "A contemporary lodge above the rice fields, grounded in the valley’s materials.", image: placeholder("Six Senses Punakha", "gilt") },
     ],
-    gallery: [valley, placeholder("Private valley picnic", "gilt"), placeholder("Punakha at dusk", "oxblood"), weaver, placeholder("Forest retreat", "juniper")],
+    gallery: [photos.appleBlossom, photos.bhutanSunset, photos.kichuLhakhang, photos.paroValley, photos.bhutanFlag],
     practicalInfo: { bestTimeToTravel: "Year-round; spring and autumn are especially clear", difficulty: "Gentle, with an optional moderate hike", recommendedFor: "Honeymoons, anniversaries, and private escapes", groupSize: "Designed for two", startingPoint: "Paro International Airport", duration: "7 days / 6 nights" },
     customizable: true,
     durationOptions: [7, 9, 12],
@@ -181,15 +167,15 @@ export const journeys: Journey[] = [
     subtitle: "Seven days of forest, stillness, and considered wellbeing.",
     themes: ["Wellness", "Nature"],
     durationDays: 7,
-    heroMedia: heroVariant(valley, "quiet-kingdom"),
+    heroMedia: heroVariant(photos.paroValley, "quiet-kingdom"),
     story: [
       "Wellbeing in Bhutan is woven into ordinary life: a path taken on foot, food shaped by the season, smoke from juniper, and a view given the time it deserves.",
       "The Quiet Kingdom creates space for gentle movement and genuine rest, held by landscape rather than a list of treatments.",
     ],
     highlights: [
-      { title: "Forest breathing", description: "Walk slowly through blue pine and juniper with a guide who reads the landscape by scent and sound.", image: mountainTrail },
-      { title: "Hot-stone ritual", description: "Experience a traditional bath prepared with river stones and local herbs.", image: placeholder("Traditional hot-stone bath", "gilt") },
-      { title: "Valley stillness", description: "Spend two nights in Phobjikha, where cranes and cloud move across a broad glacial valley.", image: placeholder("Phobjikha valley", "juniper") },
+      { title: "Forest breathing", description: "Walk slowly through mist and pine with a guide who reads the landscape by scent and sound.", image: photos.mistyValley },
+      { title: "Valley stillness", description: "Spend open hours where farmhouses and fields emerge slowly through the cloud.", image: photos.paroValley },
+      { title: "Dusk without an agenda", description: "Leave the evening unplanned and watch the last warmth settle behind the trees.", image: photos.bhutanSunset },
     ],
     itinerary: [
       { dayNumber: 1, title: "Arrive gently", location: "Paro", description: "Settle in with herbal tea, a short valley walk, and an early rest." },
@@ -207,7 +193,7 @@ export const journeys: Journey[] = [
       { propertyName: "Gangtey Lodge", location: "Phobjikha", description: "A warm, intimate lodge looking across one of Bhutan’s most spacious valleys.", image: placeholder("Gangtey Lodge, Phobjikha", "juniper") },
       { propertyName: "Dhensa Boutique Resort", location: "Punakha", description: "Quiet rooms among pine forest, with the valley opening below.", image: placeholder("Dhensa, Punakha", "gilt") },
     ],
-    gallery: [valley, mountainTrail, placeholder("Phobjikha morning", "juniper"), placeholder("Juniper smoke ritual", "oxblood"), placeholder("Punakha river stones", "gilt")],
+    gallery: [photos.paroValley, photos.mistyValley, photos.appleBlossom, photos.phuntsholingCloudSea, photos.bhutanSunset],
     practicalInfo: { bestTimeToTravel: "October–April for Phobjikha; year-round alternatives available", difficulty: "Gentle", recommendedFor: "Rest, nature, and unhurried time", groupSize: "Private, typically 1–8 guests", startingPoint: "Paro International Airport", duration: "7 days / 6 nights" },
     customizable: true,
     durationOptions: [7, 9, 11],
@@ -220,15 +206,15 @@ export const journeys: Journey[] = [
     subtitle: "Six days of kitchens, markets, farms, and generous tables.",
     themes: ["Food", "Culture", "Local Life"],
     durationDays: 6,
-    heroMedia: heroVariant(weaver, "taste-of-bhutan"),
+    heroMedia: heroVariant(photos.riceStalk, "taste-of-bhutan"),
     story: [
       "Bhutanese food makes sense in context: chillies dried on a farmhouse roof, red rice growing beside the river, cheese stirred over a wood fire, and a host insisting on one more serving.",
       "This journey follows those connections from market to field to family table, with enough space between meals to walk, talk, and notice where each flavour begins.",
     ],
     highlights: [
-      { title: "Market morning", description: "Walk Thimphu’s weekend stalls with a cook who knows each ingredient and its season.", image: placeholder("Thimphu market", "oxblood") },
-      { title: "The farmhouse table", description: "Cook and eat with a valley family, from hand-ground spices to red rice and ema datshi.", image: placeholder("Bhutanese farmhouse meal", "gilt") },
-      { title: "Craft between courses", description: "Meet weavers and makers whose work carries the same patience as the kitchen.", image: weaver },
+      { title: "Harvest morning", description: "Follow Bhutan’s red rice from mountain field to the first shared meal of the day.", image: photos.riceStalk },
+      { title: "The farmhouse landscape", description: "Cook and eat with a valley family in the landscape that shapes every ingredient.", image: photos.mistyValley },
+      { title: "Orchard season", description: "Taste the year as it changes, from spring blossom to fruit preserved for colder months.", image: photos.appleBlossom },
     ],
     itinerary: [
       { dayNumber: 1, title: "First flavours", location: "Paro", description: "Arrive to butter tea, seasonal snacks, and a relaxed introduction to the valley." },
@@ -245,7 +231,7 @@ export const journeys: Journey[] = [
       { propertyName: "Dewachen Resort", location: "Punakha", description: "A warm valley base close to farms, village paths, and riverside gardens.", image: placeholder("Dewachen Resort, Punakha", "gilt") },
       { propertyName: "Rema Resort", location: "Paro", description: "An intimate hillside stay with a kitchen rooted in local produce.", image: placeholder("Rema Resort, Paro", "oxblood") },
     ],
-    gallery: [weaver, placeholder("Red rice harvest", "gilt"), placeholder("Thimphu market chillies", "oxblood"), placeholder("Farmhouse kitchen", "juniper"), valley],
+    gallery: [photos.riceStalk, photos.appleBlossom, photos.mistyValley, photos.kichuLhakhang, photos.bhutanSunset],
     practicalInfo: { bestTimeToTravel: "Year-round; harvest season runs September–November", difficulty: "Easy", recommendedFor: "Curious eaters, makers, and culture-led travellers", groupSize: "Private, typically 2–10 guests", startingPoint: "Paro International Airport", duration: "6 days / 5 nights" },
     customizable: true,
     durationOptions: [6, 8],

@@ -25,6 +25,7 @@ export function MediaFrame({
           fetchPriority={priority ? "high" : undefined}
           sizes={sizes}
           className="media-frame__image"
+          style={media.objectPosition ? { objectPosition: media.objectPosition } : undefined}
         />
       </div>
     );

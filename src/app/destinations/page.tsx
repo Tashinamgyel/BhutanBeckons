@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MediaFrame } from "@/components/MediaFrame";
 import { PageIntro } from "@/components/PageIntro";
 import { SectionHeading } from "@/components/SectionHeading";
+import { photos } from "@/data/photos";
 
 export const metadata: Metadata = {
   title: "Destinations",
@@ -13,31 +14,31 @@ const destinations = [
     name: "Paro",
     descriptor: "Valley of arrival",
     copy: "Farmhouses, blue pine, and the cliff-held silhouette of Taktsang make Paro both Bhutan’s threshold and one of its most affecting valleys.",
-    media: { src: "/images/bhutan-valley-dawn.jpg", alt: "A Bhutanese dzong above a forested valley at dawn" },
+    media: photos.rimpungDzong,
   },
   {
     name: "Thimphu",
     descriptor: "The human-scale capital",
     copy: "A capital without traffic lights, where contemporary Bhutan unfolds among markets, small museums, workshops, and hillside temples.",
-    media: { src: "/images/bhutan-weaver.jpg", alt: "A Bhutanese artisan working at a traditional loom" },
+    media: photos.bhutanFlag,
   },
   {
     name: "Punakha",
     descriptor: "Rivers and rice fields",
     copy: "Warmer air, terraced fields, and Bhutan’s great rivers meet at a dzong whose courtyards hold centuries of national memory.",
-    media: { alt: "Punakha valley and river", label: "Punakha valley photography", tone: "gilt" as const },
+    media: photos.riceStalk,
   },
   {
     name: "Phobjikha",
     descriptor: "The wide quiet",
     copy: "A glacial valley of wetlands and farmsteads, best known as the winter home of black-necked cranes and for the space it gives the mind.",
-    media: { alt: "Phobjikha glacial valley", label: "Phobjikha valley photography", tone: "juniper" as const },
+    media: photos.mistyValley,
   },
   {
     name: "Bumthang",
     descriptor: "Bhutan’s sacred heartland",
     copy: "Four valleys of old temples, buckwheat fields, village breweries, and stories that bring Bhutan’s spiritual history close to everyday life.",
-    media: { alt: "Bumthang valley and temple", label: "Bumthang photography", tone: "oxblood" as const },
+    media: photos.appleBlossom,
   },
 ];
 

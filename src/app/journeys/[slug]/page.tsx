@@ -63,6 +63,7 @@ export default async function JourneyPage({ params }: JourneyPageProps) {
               loading="eager"
               fetchPriority="high"
               sizes="100vw"
+              style={{ objectPosition: journey.heroMedia.objectPosition }}
             />
           ) : null}
         </div>
