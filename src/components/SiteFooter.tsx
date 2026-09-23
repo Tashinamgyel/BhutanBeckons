@@ -28,6 +28,18 @@ export function SiteFooter() {
           <p className="footer-label">From Bhutan</p>
           <p>Thimphu, Kingdom of Bhutan</p>
           <a href="mailto:hello@bhutanbeckons.com">hello@bhutanbeckons.com</a>
+          <a
+            className="site-footer__social"
+            href="https://www.facebook.com/profile.php?id=61594284317512"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Bhutan Beckons on Facebook (opens in a new tab)"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M14 8.5V11h3.5l-.55 4H14v9h-4v-9H7v-4h3V8.25C10 4.7 12.15 3 15.35 3c1.25 0 2.65.2 2.65.2v3.55h-1.85C14.7 6.75 14 7.45 14 8.5Z" />
+            </svg>
+            <span>Facebook</span>
+          </a>
         </div>
       </div>
       <div className="content-shell site-footer__base">
