@@ -185,9 +185,32 @@ h3 {
 .wordmark--header {
   position: relative;
   z-index: 2;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   min-height: 2.75rem;
   padding-right: 0.35rem;
+  transition: color 180ms ease;
+}
+
+.wordmark--header:hover {
+  color: var(--kemar-red);
+}
+
+.wordmark__raven {
+  display: block;
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 2.7rem;
+  background: currentColor;
+  -webkit-mask: url("/brand/bhutan-beckons-raven.png") center / contain no-repeat;
+  mask: url("/brand/bhutan-beckons-raven.png") center / contain no-repeat;
+}
+
+.wordmark__text {
+  display: flex;
+  flex-direction: column;
 }
 
 .desktop-nav {
@@ -1139,8 +1162,21 @@ h3 {
 
 .planning-form {
   display: grid;
+  gap: 1rem;
+}
+
+.planning-fields {
+  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.6rem 1.2rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.planning-fields:disabled {
+  opacity: 0.65;
 }
 
 .form-field {
@@ -1169,9 +1205,26 @@ h3 {
   border: 0;
   border-bottom: 1px solid var(--mist-taupe);
   border-radius: 0;
-  background: transparent;
+  background: var(--limewash-stone);
   color: var(--timber-ink);
   font-size: 1rem;
+}
+
+.field-error {
+  color: var(--kemar-red);
+  font-size: 0.8rem;
+}
+
+.form-honeypot,
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .form-field textarea {
@@ -1188,10 +1241,18 @@ h3 {
 }
 
 .form-note {
-  grid-column: 1 / -1;
   max-width: 38rem;
+  margin-bottom: 0;
   color: var(--juniper-slate);
   font-size: 0.85rem;
+}
+
+.form-note--error {
+  color: var(--kemar-red);
+}
+
+.form-status {
+  min-height: 1.4rem;
 }
 
 .form-button {
@@ -1216,6 +1277,29 @@ h3 {
 .form-button:hover {
   text-decoration: underline;
   text-underline-offset: 0.35em;
+}
+
+.form-button:disabled {
+  border-color: var(--mist-taupe);
+  color: var(--mist-taupe);
+  cursor: wait;
+  text-decoration: none;
+}
+
+.planning-confirmation {
+  align-self: start;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--kemar-red);
+}
+
+.planning-confirmation h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.7rem, 5vw, 5.5rem);
+}
+
+.planning-confirmation > p:not(.eyebrow) {
+  max-width: 38rem;
+  margin-bottom: 2rem;
 }
 
 .site-footer {
@@ -1589,8 +1673,11 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .planning-fields {
+    grid-template-columns: 1fr;
+  }
+
   .form-field--wide,
-  .form-note,
   .form-button {
     grid-column: 1;
   }

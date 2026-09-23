@@ -28,8 +28,11 @@ export function SiteHeader() {
         {/* A native anchor guarantees home navigation if client routing is unavailable at the edge. */}
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
         <a className="wordmark wordmark--header" href="/" aria-label="Bhutan Beckons home" translate="no">
-          <span>Bhutan</span>
-          <span>Beckons</span>
+          <span className="wordmark__raven" aria-hidden="true" />
+          <span className="wordmark__text">
+            <span>Bhutan</span>
+            <span>Beckons</span>
+          </span>
         </a>
 
         <nav className="desktop-nav" aria-label="Main navigation">
