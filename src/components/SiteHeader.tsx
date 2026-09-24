@@ -6,6 +6,7 @@ const primaryNavigation = [
   { href: "/experiences", label: "Experiences" },
   { href: "/journeys", label: "Journeys" },
   { href: "/journal", label: "Bhutan Journal" },
+  { href: "/travel-info", label: "Travel Info" },
   { href: "/about", label: "About us" },
 ];
 

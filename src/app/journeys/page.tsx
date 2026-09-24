@@ -5,7 +5,8 @@ import { journeys } from "@/data/journeys";
 
 export const metadata: Metadata = {
   title: "Journeys",
-  description: "Explore curated private journeys across Bhutan, from culture and food to trekking, wellness, and time for two.",
+  description:
+    "Explore 5 thoughtfully paced journeys through western Bhutan, from a compact mountain escape to a full overland passage.",
 };
 
 export default function JourneysPage() {

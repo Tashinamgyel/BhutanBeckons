@@ -12,11 +12,11 @@ const telegramChatId = process.env.TELEGRAM_CHAT_ID?.trim();
 const planningFields: PlanningField[] = ["name", "email", "journey", "guests", "message"];
 const journeyOptions = [
   "Not sure yet",
-  "Whispers of the Kingdom",
-  "The Tiger’s Path",
-  "Kingdom for Two",
-  "The Quiet Kingdom",
-  "A Taste of Bhutan",
+  "The Crane & the Tiger",
+  "Three Valleys, One Kingdom",
+  "Two Sacred Ascents",
+  "From Plains to Prayer Flags",
+  "Pass or Pilgrimage",
 ] as const;
 
 function telegramMessage(payload: {

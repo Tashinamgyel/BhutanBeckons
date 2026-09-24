@@ -17,6 +17,7 @@ export function SiteFooter() {
           <Link href="/destinations">Destinations</Link>
           <Link href="/experiences">Experiences</Link>
           <Link href="/journal">Bhutan Journal</Link>
+          <Link href="/travel-info">Travel Info</Link>
         </nav>
         <nav aria-label="Work with Bhutan Beckons">
           <p className="footer-label">Together</p>
@@ -28,6 +29,41 @@ export function SiteFooter() {
           <p className="footer-label">From Bhutan</p>
           <p>Thimphu, Kingdom of Bhutan</p>
           <a href="mailto:hello@bhutanbeckons.com">hello@bhutanbeckons.com</a>
+          <div className="site-footer__methods" aria-label="Direct contact channels">
+            <a
+              className="site-footer__method"
+              href="https://wa.me/61819871288"
+              aria-describedby="whatsapp-tashi-owner"
+            >
+              <span className="site-footer__method-label">WhatsApp</span>
+              <span className="site-footer__method-value" translate="no">+61 819 871 288</span>
+              <span className="site-footer__owner" id="whatsapp-tashi-owner" role="tooltip">
+                Tashi Namgyel · Owner
+              </span>
+            </a>
+            <a
+              className="site-footer__method"
+              href="https://wa.me/97517722593"
+              aria-describedby="whatsapp-dorji-owner"
+            >
+              <span className="site-footer__method-label">WhatsApp</span>
+              <span className="site-footer__method-value" translate="no">+975 17 722 593</span>
+              <span className="site-footer__owner" id="whatsapp-dorji-owner" role="tooltip">
+                Dorji Rabten · Owner
+              </span>
+            </a>
+            <a
+              className="site-footer__method"
+              href="weixin://dl/chat?tashinamgyel_"
+              aria-describedby="wechat-tashi-owner"
+            >
+              <span className="site-footer__method-label">WeChat</span>
+              <span className="site-footer__method-value" translate="no">tashinamgyel_</span>
+              <span className="site-footer__owner" id="wechat-tashi-owner" role="tooltip">
+                Tashi Namgyel · Owner
+              </span>
+            </a>
+          </div>
           <a
             className="site-footer__social"
             href="https://www.facebook.com/profile.php?id=61594284317512"
