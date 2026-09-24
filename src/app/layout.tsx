@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     "Private, thoughtfully paced journeys through Bhutan, shaped by local knowledge and a deeper sense of place.",
   icons: {
     icon: {
-      url: "/brand/bhutan-beckons-raven.png",
+      url: "/favicon.png",
       type: "image/png",
-      sizes: "542x486",
+      sizes: "512x512",
     },
-    shortcut: "/brand/bhutan-beckons-raven.png",
+    shortcut: "/favicon.png",
   },
   openGraph: {
     type: "website",
