@@ -570,6 +570,40 @@ h3 {
   margin-bottom: 0;
 }
 
+.home-intro__photography {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(1.5rem, 3vw, 3.5rem);
+  margin-top: clamp(4.5rem, 9vw, 9rem);
+}
+
+.home-intro__photograph {
+  margin: 0;
+}
+
+.home-intro__photograph--valley {
+  grid-column: 1 / span 8;
+}
+
+.home-intro__photograph--autumn {
+  grid-column: 9 / span 4;
+  margin-top: clamp(4rem, 10vw, 10rem);
+}
+
+.home-intro__photo--valley {
+  min-height: clamp(28rem, 43vw, 42rem);
+}
+
+.home-intro__photo--autumn {
+  min-height: clamp(18rem, 28vw, 27rem);
+}
+
+.home-intro__photograph figcaption {
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+}
+
 .home-journeys {
   border-top: 1px solid var(--mist-taupe);
 }
@@ -602,8 +636,35 @@ h3 {
   min-height: clamp(22rem, 40vw, 42rem);
 }
 
+.journey-card__media-composition {
+  position: relative;
+  min-height: clamp(22rem, 40vw, 42rem);
+}
+
+.journey-card__media-composition .journey-card__media {
+  min-height: 0;
+}
+
+.journey-card__media--primary {
+  position: absolute;
+  inset: 0;
+}
+
+.journey-card__media--secondary {
+  position: absolute;
+  right: clamp(0.75rem, 2vw, 1.75rem);
+  bottom: clamp(0.75rem, 2vw, 1.75rem);
+  width: clamp(8.5rem, 31%, 16rem);
+  height: clamp(13rem, 48%, 22rem);
+  border: clamp(0.3rem, 0.65vw, 0.55rem) solid var(--limewash-stone);
+}
+
 .journey-card:not(.journey-card--featured) .journey-card__media {
   min-height: clamp(20rem, 31vw, 33rem);
+}
+
+.journey-card:not(.journey-card--featured) .journey-card__media-composition .journey-card__media {
+  min-height: 0;
 }
 
 .journey-card__body {
@@ -641,6 +702,39 @@ h3 {
   grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.65fr);
   align-items: center;
   gap: clamp(3rem, 8vw, 9rem);
+}
+
+.home-craft__collage {
+  position: relative;
+  min-height: clamp(34rem, 58vw, 52rem);
+  isolation: isolate;
+}
+
+.home-craft__collage-photo {
+  position: absolute;
+  min-height: 0;
+  border: clamp(0.35rem, 0.6vw, 0.6rem) solid var(--timber-ink);
+}
+
+.home-craft__collage-photo--dzong {
+  z-index: 1;
+  inset: 10% 6% 13%;
+}
+
+.home-craft__collage-photo--kuensel {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 49%;
+  height: 38%;
+}
+
+.home-craft__collage-photo--hut {
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  width: 35%;
+  height: 54%;
 }
 
 .home-craft__image {
@@ -1113,6 +1207,64 @@ h3 {
   min-height: clamp(16rem, 22vw, 23rem);
 }
 
+.highlight-card__media-composition {
+  position: relative;
+  min-height: clamp(16rem, 22vw, 23rem);
+}
+
+.highlight-card__media-composition .highlight-card__media {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+}
+
+.highlight-card__secondary-media {
+  position: absolute;
+  right: clamp(0.75rem, 1.5vw, 1.25rem);
+  bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+  width: clamp(6.5rem, 28%, 8.5rem);
+  height: clamp(8.75rem, 55%, 12rem);
+  min-height: 0;
+  border: clamp(0.25rem, 0.45vw, 0.4rem) solid var(--limewash-stone);
+}
+
+.highlight-card__decorated-media {
+  position: relative;
+}
+
+.highlight-card__floral-stickers {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.highlight-card__floral-sticker {
+  position: absolute;
+  height: auto;
+}
+
+.highlight-card__floral-sticker--one {
+  top: 10%;
+  left: clamp(-3.25rem, -3.5vw, -1.75rem);
+  width: clamp(6.5rem, 12vw, 10rem);
+  transform: rotate(-12deg);
+}
+
+.highlight-card__floral-sticker--two {
+  top: 35%;
+  right: clamp(-3.75rem, -4vw, -2.25rem);
+  width: clamp(8rem, 15vw, 12rem);
+  transform: rotate(11deg);
+}
+
+.highlight-card__floral-sticker--three {
+  bottom: clamp(-3rem, -3.5vw, -1.75rem);
+  left: 20%;
+  width: clamp(5rem, 9vw, 7.5rem);
+  transform: rotate(24deg);
+}
+
 .highlight-card h3 {
   margin: 1.2rem 0 0.6rem;
   font-size: clamp(1.65rem, 2.4vw, 2.7rem);
@@ -1207,28 +1359,6 @@ h3 {
 .included-column li span:first-child {
   color: var(--kemar-red);
   font-family: var(--font-ibm-plex-mono), monospace;
-}
-
-.stay-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(2rem, 5vw, 5rem);
-}
-
-.stay-card:nth-child(even) {
-  margin-top: clamp(2rem, 6vw, 7rem);
-}
-
-.stay-card__media {
-  min-height: clamp(21rem, 34vw, 36rem);
-}
-
-.stay-card h3 {
-  margin: 1.3rem 0 0.5rem;
-}
-
-.stay-card .utility-line {
-  color: var(--kemar-red);
 }
 
 .gallery-grid {
@@ -1646,12 +1776,19 @@ h3 {
   visibility: visible;
 }
 
+.site-footer__socials {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1rem;
+}
+
 .site-footer__social {
   display: flex;
   align-items: center;
   width: max-content;
   min-height: 2.75rem;
-  margin-top: 1rem;
   gap: 0.65rem;
   font-family: var(--font-ibm-plex-mono), monospace;
   font-size: 0.72rem;
@@ -1664,6 +1801,17 @@ h3 {
   height: 1.25rem;
   fill: currentColor;
   flex: none;
+}
+
+.site-footer__social--instagram svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+}
+
+.site-footer__social--instagram .site-footer__instagram-dot {
+  fill: currentColor;
+  stroke: none;
 }
 
 .site-footer__base {
@@ -1858,6 +2006,25 @@ h3 {
     padding-top: 0;
   }
 
+  .home-intro__photography {
+    display: block;
+    margin-top: 4rem;
+  }
+
+  .home-intro__photograph--autumn {
+    width: 72%;
+    margin-top: 2.5rem;
+    margin-left: auto;
+  }
+
+  .home-intro__photo--valley {
+    min-height: 23rem;
+  }
+
+  .home-intro__photo--autumn {
+    min-height: 18rem;
+  }
+
   .page-intro::before,
   .home-intro::before,
   .home-route::before,
@@ -1900,6 +2067,24 @@ h3 {
   .journey-card__media,
   .journey-card:not(.journey-card--featured) .journey-card__media {
     min-height: 25rem;
+  }
+
+  .home-craft__collage {
+    min-height: 34rem;
+  }
+
+  .home-craft__collage-photo--dzong {
+    inset: 14% 0 17%;
+  }
+
+  .home-craft__collage-photo--kuensel {
+    width: 64%;
+    height: 34%;
+  }
+
+  .home-craft__collage-photo--hut {
+    width: 42%;
+    height: 49%;
   }
 
   .home-craft__image {
@@ -1991,8 +2176,7 @@ h3 {
     font-size: clamp(3.5rem, 17vw, 5.5rem);
   }
 
-  .highlights-grid,
-  .stay-grid {
+  .highlights-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2000,21 +2184,48 @@ h3 {
     grid-row: auto;
   }
 
-  .highlight-card,
-  .stay-card,
-  .stay-card:nth-child(even) {
+  .highlight-card {
     margin: 0 0 3rem;
   }
 
-  .highlight-card:last-child,
-  .stay-card:last-child {
+  .highlight-card:last-child {
     margin-bottom: 0;
   }
 
   .highlight-card__media,
-  .highlight-card:not(:first-child) .highlight-card__media,
-  .stay-card__media {
+  .highlight-card:not(:first-child) .highlight-card__media {
     min-height: 25rem;
+  }
+
+  .highlight-card__media-composition {
+    min-height: 17.5rem;
+  }
+
+  .highlight-card__media-composition .highlight-card__media {
+    min-height: 0;
+  }
+
+  .highlight-card__secondary-media {
+    width: clamp(6.5rem, 31%, 8rem);
+    height: clamp(9rem, 60%, 11rem);
+  }
+
+  .highlight-card__floral-sticker--one {
+    top: 8%;
+    left: -1.25rem;
+    width: 5.75rem;
+  }
+
+  .highlight-card__floral-sticker--two {
+    top: 44%;
+    right: -1.25rem;
+    width: 7rem;
+  }
+
+  .highlight-card__floral-sticker--three {
+    bottom: -1.5rem;
+    left: 18%;
+    width: 4.75rem;
   }
 
   .itinerary-aside {

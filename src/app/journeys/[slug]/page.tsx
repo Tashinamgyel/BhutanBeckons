@@ -105,7 +105,39 @@ export default async function JourneyPage({ params }: JourneyPageProps) {
           <div className="highlights-grid">
             {journey.highlights.map((highlight) => (
               <article className="highlight-card" key={highlight.title}>
-                <MediaFrame media={highlight.image} className="highlight-card__media" />
+                {highlight.decorativeCutout?.src ? (
+                  <div className="highlight-card__decorated-media">
+                    <MediaFrame media={highlight.image} className="highlight-card__media" />
+                    <div className="highlight-card__floral-stickers" aria-hidden="true">
+                      {(["one", "two", "three"] as const).map((placement) => (
+                        <Image
+                          src={highlight.decorativeCutout!.src!}
+                          alt=""
+                          width={275}
+                          height={300}
+                          sizes="(max-width: 760px) 28vw, 12vw"
+                          className={`highlight-card__floral-sticker highlight-card__floral-sticker--${placement}`}
+                          key={placement}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ) : highlight.secondaryImage ? (
+                  <div className="highlight-card__media-composition">
+                    <MediaFrame
+                      media={highlight.image}
+                      className="highlight-card__media"
+                      sizes="(max-width: 760px) 100vw, 42vw"
+                    />
+                    <MediaFrame
+                      media={highlight.secondaryImage}
+                      className="highlight-card__secondary-media"
+                      sizes="(max-width: 760px) 34vw, 12vw"
+                    />
+                  </div>
+                ) : (
+                  <MediaFrame media={highlight.image} className="highlight-card__media" />
+                )}
                 <h3>{highlight.title}</h3>
                 <p>{highlight.description}</p>
               </article>
@@ -156,27 +188,6 @@ export default async function JourneyPage({ params }: JourneyPageProps) {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="journey-section" aria-labelledby="stay-title">
-        <div className="content-shell">
-          <SectionHeading
-            eyebrow="Where you’ll stay"
-            title="Places with a sense of place."
-            intro="Properties are selected for warmth, location, and the way they belong to their landscape. Final choices follow your preferred travel style."
-            align="split"
-          />
-          <div className="stay-grid">
-            {journey.accommodations.map((stay) => (
-              <article className="stay-card" key={`${stay.propertyName}-${stay.location}`}>
-                <MediaFrame media={stay.image} className="stay-card__media" />
-                <h3 id={stay === journey.accommodations[0] ? "stay-title" : undefined}>{stay.propertyName}</h3>
-                <p className="utility-line">{stay.location}</p>
-                <p>{stay.description}</p>
-              </article>
-            ))}
           </div>
         </div>
       </section>

@@ -12,12 +12,28 @@ export function JourneyCard({ journey, featured = false, eagerImage = false }: J
   return (
     <article className={`journey-card${featured ? " journey-card--featured" : ""}`}>
       <Link href={`/journeys/${journey.slug}`} aria-label={`Explore ${journey.name}`}>
-        <MediaFrame
-          media={journey.heroMedia}
-          className="journey-card__media"
-          priority={eagerImage}
-          sizes={featured ? "(max-width: 760px) 100vw, 66vw" : "(max-width: 760px) 100vw, 38vw"}
-        />
+        {journey.cardMedia ? (
+          <div className="journey-card__media-composition">
+            <MediaFrame
+              media={journey.cardMedia.primary}
+              className="journey-card__media journey-card__media--primary"
+              priority={eagerImage}
+              sizes={featured ? "(max-width: 760px) 100vw, 66vw" : "(max-width: 760px) 100vw, 38vw"}
+            />
+            <MediaFrame
+              media={journey.cardMedia.secondary}
+              className="journey-card__media journey-card__media--secondary"
+              sizes="(max-width: 760px) 40vw, 22vw"
+            />
+          </div>
+        ) : (
+          <MediaFrame
+            media={journey.heroMedia}
+            className="journey-card__media"
+            priority={eagerImage}
+            sizes={featured ? "(max-width: 760px) 100vw, 66vw" : "(max-width: 760px) 100vw, 38vw"}
+          />
+        )}
         <div className="journey-card__body">
           <p className="utility-line">
             {journey.themes.join(" · ")} · {journey.durationDays} days

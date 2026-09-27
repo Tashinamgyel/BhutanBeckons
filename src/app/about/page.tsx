@@ -21,7 +21,7 @@ export default function AboutPage() {
       <section className="content-section">
         <div className="content-shell home-craft__grid">
           <MediaFrame
-            media={photos.kichuLhakhang}
+            media={photos.prayerFlagDetail}
             className="home-craft__image"
             sizes="(max-width: 760px) 100vw, 62vw"
           />

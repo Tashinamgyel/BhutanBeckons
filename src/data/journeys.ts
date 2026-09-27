@@ -42,7 +42,11 @@ export const journeys: Journey[] = [
     subtitle: "Seven days through Bhutan’s western valleys, sacred paths, and living heritage.",
     themes: ["Culture", "Nature", "Wildlife"],
     durationDays: 7,
-    heroMedia: heroVariant(photos.mistyValley, "crane-and-tiger"),
+    heroMedia: heroVariant(photos.twoLegs, "crane-and-tiger"),
+    cardMedia: {
+      primary: photos.phobjikhaFujifilm,
+      secondary: photos.taktsang,
+    },
     story: [
       "This is the fullest of our air-arrival journeys: an unhurried passage from Thimphu’s living traditions to Punakha’s rivers and the wide quiet of Phobjikha.",
       "The route balances temples, village paths, forest walks, and Bhutan’s defining ascent to Taktsang, with time to understand why each place matters.",
@@ -51,17 +55,17 @@ export const journeys: Journey[] = [
       {
         title: "The valley of cranes",
         description: "Walk beneath Gangtey Monastery and learn why Phobjikha protects Bhutan’s winter visitors.",
-        image: placeholder("Black-necked cranes in Phobjikha Valley", "juniper"),
+        image: photos.twoLegs,
       },
       {
         title: "Between two rivers",
         description: "Enter Punakha Dzong at the meeting of the Pho Chhu and Mo Chhu, then cross the valley on foot.",
-        image: placeholder("Punakha Dzong between the Pho Chhu and Mo Chhu", "gilt"),
+        image: photos.punakhaDzong,
       },
       {
         title: "The final ascent",
         description: "Climb through pine forest to Taktsang, allowing the mountain to set the day’s pace.",
-        image: placeholder("Taktsang Monastery above the Paro Valley", "oxblood"),
+        image: photos.taktsang,
       },
     ],
     itinerary: [
@@ -117,7 +121,8 @@ export const journeys: Journey[] = [
       stay("Paro", "oxblood", "A restful final stay with easy access to the Taktsang trail and the airport."),
     ],
     gallery: [
-      photos.mistyValley,
+      photos.twoLegs,
+      photos.taktsang,
       photos.rimpungDzong,
       photos.kichuLhakhang,
       photos.paroValley,
@@ -152,12 +157,12 @@ export const journeys: Journey[] = [
       {
         title: "A capital made by hand",
         description: "Meet Thimphu through its market, traditional arts, textiles, and working religious landmarks.",
-        image: placeholder("Traditional arts and crafts in Thimphu", "juniper"),
+        image: photos.thimphuFestival,
       },
       {
         title: "The palace of happiness",
         description: "Follow the road over Dochula to Punakha Dzong, framed by two rivers and layers of history.",
-        image: placeholder("Punakha Dzong and its river setting", "gilt"),
+        image: photos.dochula,
       },
       {
         title: "Paro’s sacred valley",
@@ -247,17 +252,18 @@ export const journeys: Journey[] = [
       {
         title: "Above Dochula",
         description: "Walk through rhododendron and high forest to Lungchutse Lhakhang, with the Himalayan range opening in clear weather.",
-        image: placeholder("The Lungchutse trail above Dochula", "juniper"),
+        image: photos.dochula,
+        decorativeCutout: photos.rhododendronCutout,
       },
       {
         title: "A valley from above",
         description: "Climb through Punakha’s fields to Khamsum Yulley Namgyal Chorten and its wide river-valley view.",
-        image: placeholder("Khamsum Yulley Namgyal Chorten above Punakha", "gilt"),
+        image: photos.khamsumYulley,
       },
       {
         title: "Taktsang at your pace",
         description: "Finish with Bhutan’s iconic ascent, taking the full day to reach the monastery without rushing.",
-        image: placeholder("The Taktsang pilgrimage trail", "oxblood"),
+        image: photos.taktsang,
       },
     ],
     itinerary: [
@@ -346,7 +352,7 @@ export const journeys: Journey[] = [
       {
         title: "A pilgrimage before the road home",
         description: "Give the final full day to Taktsang before turning south through the mountains once more.",
-        image: placeholder("Taktsang Monastery on the cliff above Paro", "oxblood"),
+        image: photos.taktsang,
       },
     ],
     itinerary: [
@@ -444,17 +450,18 @@ export const journeys: Journey[] = [
       {
         title: "A gentle arrival",
         description: "Follow the river road from Paro to Thimphu, pausing at Tachogang and Chuzom before settling into the capital.",
-        image: placeholder("Tachogang Lhakhang and its bridge beside the Paro–Thimphu road", "juniper"),
+        image: photos.tachogLhakhang,
       },
       {
         title: "The valley of cranes",
         description: "Spend a day with Gangtey Monastery, the Phobjikha nature trail, and the Black-necked Crane Education Centre.",
-        image: placeholder("Phobjikha Valley, Gangtey Monastery, and black-necked cranes", "gilt"),
+        image: photos.blackNeckedCrane,
       },
       {
         title: "Your final-day choice",
         description: "Take the high road to Chele La or make the pilgrimage on foot to Taktsang above Paro.",
-        image: placeholder("Prayer flags at Chele La Pass or the Taktsang pilgrimage trail", "oxblood"),
+        image: photos.cheleLaPass,
+        secondaryImage: photos.taktsang,
       },
     ],
     itinerary: [

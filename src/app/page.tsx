@@ -35,18 +35,39 @@ export default function HomePage() {
       </section>
 
       <section className="home-intro">
-        <div className="content-shell home-intro__grid">
-          <div>
-            <p className="eyebrow">Why Bhutan Beckons</p>
-            <h2>Not a checklist. A story you enter.</h2>
+        <div className="content-shell">
+          <div className="home-intro__grid">
+            <div>
+              <p className="eyebrow">Why Bhutan Beckons</p>
+              <h2>Not a checklist. A story you enter.</h2>
+            </div>
+            <div className="home-intro__copy">
+              <p>
+                We create private journeys across Bhutan for people who would rather understand a place than hurry through it.
+              </p>
+              <p>
+                Each route grows from local knowledge: the right valley for the season, the table worth lingering at, and the quiet hour when a monastery belongs to the mountain again.
+              </p>
+            </div>
           </div>
-          <div className="home-intro__copy">
-            <p>
-              We create private journeys across Bhutan for people who would rather understand a place than hurry through it.
-            </p>
-            <p>
-              Each route grows from local knowledge: the right valley for the season, the table worth lingering at, and the quiet hour when a monastery belongs to the mountain again.
-            </p>
+
+          <div className="home-intro__photography">
+            <figure className="home-intro__photograph home-intro__photograph--valley">
+              <MediaFrame
+                media={photos.paroValleyTwo}
+                className="home-intro__photo home-intro__photo--valley"
+                sizes="(max-width: 760px) calc(100vw - 2.5rem), 62vw"
+              />
+              <figcaption className="utility-line">Paro Valley · Light after rain</figcaption>
+            </figure>
+            <figure className="home-intro__photograph home-intro__photograph--autumn">
+              <MediaFrame
+                media={photos.autumn}
+                className="home-intro__photo home-intro__photo--autumn"
+                sizes="(max-width: 760px) 72vw, 28vw"
+              />
+              <figcaption className="utility-line">Bhutan · Autumn canopy</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -72,11 +93,23 @@ export default function HomePage() {
 
       <section className="home-craft">
         <div className="content-shell home-craft__grid">
-          <MediaFrame
-            media={photos.kichuLhakhang}
-            className="home-craft__image"
-            sizes="(max-width: 760px) 100vw, 62vw"
-          />
+          <div className="home-craft__collage" role="group" aria-label="Scenes of people, place, and tradition in Bhutan">
+            <MediaFrame
+              media={photos.tashichhoDzongFestival}
+              className="home-craft__collage-photo home-craft__collage-photo--dzong"
+              sizes="(max-width: 760px) calc(100vw - 2.5rem), 56vw"
+            />
+            <MediaFrame
+              media={photos.kuenselPhodrang}
+              className="home-craft__collage-photo home-craft__collage-photo--kuensel"
+              sizes="(max-width: 760px) 64vw, 28vw"
+            />
+            <MediaFrame
+              media={photos.hut}
+              className="home-craft__collage-photo home-craft__collage-photo--hut"
+              sizes="(max-width: 760px) 42vw, 21vw"
+            />
+          </div>
           <div>
             <p className="eyebrow">Experience, not itinerary</p>
             <h2>Made by people who live here.</h2>

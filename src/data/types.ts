@@ -12,6 +12,8 @@ export interface JourneyHighlight {
   title: string;
   description: string;
   image: MediaAsset;
+  secondaryImage?: MediaAsset;
+  decorativeCutout?: MediaAsset;
 }
 
 export interface ItineraryDay {
@@ -46,6 +48,10 @@ export interface Journey {
   themes: string[];
   durationDays: number;
   heroMedia: MediaAsset;
+  cardMedia?: {
+    primary: MediaAsset;
+    secondary: MediaAsset;
+  };
   story: string[];
   highlights: JourneyHighlight[];
   itinerary: ItineraryDay[];

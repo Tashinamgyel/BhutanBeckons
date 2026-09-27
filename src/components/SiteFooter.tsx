@@ -64,18 +64,34 @@ export function SiteFooter() {
               </span>
             </a>
           </div>
-          <a
-            className="site-footer__social"
-            href="https://www.facebook.com/profile.php?id=61594284317512"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Bhutan Beckons on Facebook (opens in a new tab)"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M14 8.5V11h3.5l-.55 4H14v9h-4v-9H7v-4h3V8.25C10 4.7 12.15 3 15.35 3c1.25 0 2.65.2 2.65.2v3.55h-1.85C14.7 6.75 14 7.45 14 8.5Z" />
-            </svg>
-            <span>Facebook</span>
-          </a>
+          <nav className="site-footer__socials" aria-label="Bhutan Beckons social media">
+            <a
+              className="site-footer__social"
+              href="https://www.facebook.com/profile.php?id=61594284317512"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Bhutan Beckons on Facebook (opens in a new tab)"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M14 8.5V11h3.5l-.55 4H14v9h-4v-9H7v-4h3V8.25C10 4.7 12.15 3 15.35 3c1.25 0 2.65.2 2.65.2v3.55h-1.85C14.7 6.75 14 7.45 14 8.5Z" />
+              </svg>
+              <span>Facebook</span>
+            </a>
+            <a
+              className="site-footer__social site-footer__social--instagram"
+              href="https://www.instagram.com/bhutanbeckons?stkn=MXJtbXcycDA2OXVoNA=="
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Bhutan Beckons on Instagram (opens in a new tab)"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="4.75" />
+                <circle cx="12" cy="12" r="4.1" />
+                <circle className="site-footer__instagram-dot" cx="17.35" cy="6.7" r="1" />
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </nav>
         </div>
       </div>
       <div className="content-shell site-footer__base">
