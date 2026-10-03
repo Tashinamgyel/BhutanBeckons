@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 };
 
 const experiences = [
-  { title: "Living culture", copy: "Enter monasteries in the quiet hours, meet craftspeople at work, and understand traditions as part of the present—not a performance of the past.", media: photos.kichuLhakhang },
-  { title: "Paths and peaks", copy: "Walk from gentle valley trails to high ridges, always with the time, support, and local knowledge to make effort feel rewarding.", media: photos.phuntsholingCloudSea },
+  { title: "Living culture", copy: "Enter monasteries in the quiet hours, meet craftspeople at work, and understand traditions as part of the present—not a performance of the past.", media: photos.sangOffering },
+  { title: "Paths and peaks", copy: "Walk from gentle valley trails to high ridges, always with the time, support, and local knowledge to make effort feel rewarding.", media: photos.twoTravelersAtLake },
   { title: "Food and farm life", copy: "Follow flavour to its source: market chillies, red-rice fields, farmhouse kitchens, and the people who turn a harvest into hospitality.", media: photos.riceStalk },
-  { title: "Nature and wildlife", copy: "Move through crane valleys, subtropical forest, and alpine country with guides who recognise the landscape as habitat, livelihood, and home.", media: photos.mistyValley },
-  { title: "Wellbeing and stillness", copy: "Find restoration in forest walks, hot-stone baths, simple movement, and days designed with enough quiet to hear yourself think.", media: photos.appleBlossom },
+  { title: "Nature and wildlife", copy: "Move through crane valleys, subtropical forest, and alpine country with guides who recognise the landscape as habitat, livelihood, and home.", media: photos.lake },
+  { title: "Wellbeing and stillness", copy: "Find restoration in forest walks, hot-stone baths, simple movement, and days designed with enough quiet to hear yourself think.", media: photos.dungtshoRest },
   { title: "Private celebrations", copy: "Mark a beginning, anniversary, or long-awaited reunion with privacy, thoughtful rituals, and details that feel personal rather than produced.", media: photos.bhutanFlag },
 ];
 
@@ -30,7 +30,7 @@ export default function ExperiencesPage() {
         <div className="content-shell content-grid">
           {experiences.map((experience, index) => (
             <article className={`content-card${index === 0 ? " content-card--wide" : ""}`} key={experience.title}>
-              <MediaFrame media={experience.media} className="content-card__media" />
+              <MediaFrame media={experience.media} className="content-card__media" priority={index === 0} />
               <h2>{experience.title}</h2>
               <p>{experience.copy}</p>
             </article>

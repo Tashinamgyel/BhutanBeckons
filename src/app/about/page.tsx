@@ -37,6 +37,14 @@ export default function AboutPage() {
         <div className="content-shell">
           <SectionHeading eyebrow="What guides us" title="A lighter footprint. A deeper connection." />
           <div className="content-grid">
+            <figure className="content-card content-card--wide">
+              <MediaFrame
+                media={photos.raven}
+                className="content-card__media"
+                sizes="(max-width: 760px) calc(100vw - 2.5rem), 56vw"
+              />
+              <figcaption className="utility-line">Raven · Bhutan’s national bird</figcaption>
+            </figure>
             <article className="content-card"><h3>Travel slowly</h3><p>Fewer changes of place create more time for context, conversation, and genuine rest.</p></article>
             <article className="content-card"><h3>Keep value local</h3><p>We favour local guides, makers, hosts, and independently rooted experiences wherever possible.</p></article>
             <article className="content-card"><h3>Respect the invitation</h3><p>Bhutan is not a backdrop. We enter homes, temples, and landscapes with humility and clear local guidance.</p></article>

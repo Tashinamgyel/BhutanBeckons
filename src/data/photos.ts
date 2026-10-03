@@ -31,6 +31,11 @@ export const photos = {
     alt: "The winding road across a green ridge disappearing into cloud at Chele La Pass",
     objectPosition: "50% 50%",
   },
+  dungtshoRest: {
+    src: "/photos/enroute-dungtsho.jpg",
+    alt: "Travelers resting on an alpine ridge beneath cloud-filled skies en route to Dungtsho",
+    objectPosition: "53% 58%",
+  },
   dochula: {
     src: "/photos/dochula-without-people.jpg",
     alt: "The 108 Druk Wangyal chortens arranged across the green hillside at Dochula Pass",
@@ -55,6 +60,11 @@ export const photos = {
     src: "/photos/kuensel-phodrang.jpg",
     alt: "A traveler photographing Buddha Dordenma from Kuensel Phodrang",
     objectPosition: "48% 50%",
+  },
+  lake: {
+    src: "/photos/alpine-lake.jpg",
+    alt: "A dark alpine lake held between snow-dusted mountain slopes in Bhutan",
+    objectPosition: "50% 58%",
   },
   mistyValley: {
     src: "/photos/misty-valley.jpg",
@@ -101,6 +111,11 @@ export const photos = {
     alt: "Rinpung Dzong overlooking green fields and the Paro Valley",
     objectPosition: "50% 53%",
   },
+  raven: {
+    src: "/photos/raven-on-gilded-finial.jpg",
+    alt: "A raven perched on a gilded Bhutanese finial beneath a rain-heavy sky",
+    objectPosition: "50% 48%",
+  },
   rhododendronCutout: {
     src: "/photos/rhododendron-cutout.png",
     alt: "",
@@ -120,6 +135,11 @@ export const photos = {
     alt: "Tachogang Lhakhang set against the mountains beside the Paro–Thimphu road",
     objectPosition: "50% 57%",
   },
+  thimphuValley: {
+    src: "/photos/thimphu-valley-evening.jpg",
+    alt: "Thimphu spread across its mountain valley in the evening light",
+    objectPosition: "50% 58%",
+  },
   thimphuFestival: {
     src: "/photos/thimphu.jpeg",
     alt: "A traditional festival gathering in the courtyard of Tashichho Dzong in Thimphu",
@@ -134,5 +154,15 @@ export const photos = {
     src: "/photos/two-legs-fujifilm.jpg",
     alt: "Two travelers resting in the grass above Phobjikha Valley",
     objectPosition: "50% 55%",
+  },
+  twoTravelersAtLake: {
+    src: "/photos/two-travelers-at-alpine-lake.jpg",
+    alt: "Two travelers sitting together above a snow-dusted alpine lake in Bhutan",
+    objectPosition: "50% 55%",
+  },
+  sangOffering: {
+    src: "/photos/sang-incense-offering.jpg",
+    alt: "Juniper incense burning in a traditional sang offering in Bhutan",
+    objectPosition: "50% 57%",
   },
 } satisfies Record<string, MediaAsset>;

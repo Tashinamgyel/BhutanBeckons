@@ -20,7 +20,7 @@ const destinations = [
     name: "Thimphu",
     descriptor: "The human-scale capital",
     copy: "A capital without traffic lights, where contemporary Bhutan unfolds among markets, small museums, workshops, and hillside temples.",
-    media: photos.bhutanFlag,
+    media: photos.thimphuValley,
   },
   {
     name: "Punakha",
