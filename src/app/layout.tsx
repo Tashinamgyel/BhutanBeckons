@@ -35,12 +35,12 @@ export const metadata: Metadata = {
   description:
     "Private, thoughtfully paced journeys through Bhutan, shaped by local knowledge and a deeper sense of place.",
   icons: {
-    icon: {
-      url: "/favicon.png",
-      type: "image/png",
-      sizes: "512x512",
-    },
-    shortcut: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
   openGraph: {
     type: "website",
