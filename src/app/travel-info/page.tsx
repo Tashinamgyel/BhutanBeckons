@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Travel Information",
   description:
     "Essential Bhutan travel information from Bhutan Beckons, including SDF rates, entry documents, advance booking advice, and cancellation terms.",
+  alternates: { canonical: "/travel-info" },
 };
 
 const policyReviewDate = new Date("2026-09-24T00:00:00+06:00");

@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: JourneyPageProps): Promise<Me
   return {
     title: journey.name,
     description: `${journey.subtitle} ${journey.tagline}`,
+    alternates: { canonical: `/journeys/${journey.slug}` },
     openGraph: {
       title: `${journey.name} | Bhutan Beckons`,
       description: journey.subtitle,

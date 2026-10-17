@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { JourneyCard } from "@/components/JourneyCard";
@@ -6,6 +7,10 @@ import { RouteThread } from "@/components/RouteThread";
 import { SectionHeading } from "@/components/SectionHeading";
 import { journeys } from "@/data/journeys";
 import { photos } from "@/data/photos";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (

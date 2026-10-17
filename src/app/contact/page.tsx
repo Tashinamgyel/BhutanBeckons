@@ -5,6 +5,7 @@ import { PlanningForm } from "@/components/PlanningForm";
 export const metadata: Metadata = {
   title: "Plan Your Journey",
   description: "Start a conversation with Bhutan Beckons about a private, carefully paced journey through Bhutan.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

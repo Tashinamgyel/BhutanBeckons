@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const metadata: Metadata = {
   title: "Partner With Us",
   description: "Work with Bhutan Beckons to offer distinctive, locally operated private journeys across Bhutan.",
+  alternates: { canonical: "/partner-with-us" },
 };
 
 export default function PartnerPage() {

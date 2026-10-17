@@ -7,6 +7,7 @@ import { photos } from "@/data/photos";
 export const metadata: Metadata = {
   title: "Experiences",
   description: "Discover Bhutan through culture, food, walking, nature, wellbeing, and local connection.",
+  alternates: { canonical: "/experiences" },
 };
 
 const experiences = [

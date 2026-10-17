@@ -8,6 +8,7 @@ import { photos } from "@/data/photos";
 export const metadata: Metadata = {
   title: "About Us",
   description: "Bhutan Beckons creates thoughtful private journeys grounded in local knowledge, personal care, and a lighter way of travelling.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

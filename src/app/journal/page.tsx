@@ -6,6 +6,7 @@ import { photos } from "@/data/photos";
 export const metadata: Metadata = {
   title: "Bhutan Journal",
   description: "Field notes from Bhutan on seasons, culture, food, paths, and travelling with greater attention.",
+  alternates: { canonical: "/journal" },
 };
 
 const notes = [

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Journeys",
   description:
     "Explore 5 thoughtfully paced journeys through western Bhutan, from a compact mountain escape to a full overland passage.",
+  alternates: { canonical: "/journeys" },
 };
 
 export default function JourneysPage() {

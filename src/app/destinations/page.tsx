@@ -7,6 +7,7 @@ import { photos } from "@/data/photos";
 export const metadata: Metadata = {
   title: "Destinations",
   description: "Meet the valleys and regions that shape a journey through Bhutan, from Paro and Punakha to Phobjikha and Bumthang.",
+  alternates: { canonical: "/destinations" },
 };
 
 const destinations = [
